@@ -1,0 +1,618 @@
+:root {
+    
+    --unit: 1rem;
+    --min-viewport: 48;
+    --max-viewport: 128;
+
+}
+html {
+    font-size: 62.5%;
+}
+
+
+/* Min Max размер шрифта */
+
+h1, .h1 {
+
+--min: 2.9;
+--max: 9.2;
+font-weight: 800;
+
+
+}
+h2,  .h2 {
+
+--min: 2.4;
+--max: 6;
+font-weight: 800;
+
+}
+
+h3, .h3 {
+
+--min: 2.1;
+--max: 3.8;
+font-weight: 800;
+
+    
+}
+
+h4, .h4 {
+
+--min: 1.9;
+--max: 2.5;
+font-weight: 700;
+
+}
+
+h5, .h5 {
+
+--min: 1.8;
+--max: 2.3;
+font-weight: 700;
+
+}
+
+h6, .h6 {
+
+--min: 1.6;
+--max: 2.1;
+font-weight: 700;
+
+}
+
+body {
+
+--min: 1.4;
+--max: 1.7;
+
+}
+
+h1, .h1, h2,  .h2, h3, .h3, h4, .h4, h5,  .h5, h6, .h6, body {
+
+font-size: clamp(var(--min) * var(--unit), ((var(--min) * var(--unit)) + (var(--max) - var(--min)) * ((100vw - (var(--min-viewport) * var(--unit) )) / (var(--max-viewport) - var(--min-viewport)))), var(--max) * var(--unit)) ;
+    font-family: "Net PT", Sans-serif;
+
+}
+/* высота строк */
+.lh--1-1 {
+line-height: 1.1;
+}
+.lh--1-2 {
+line-height: 1.2;
+}
+.lh--1-3 {
+line-height: 1.3;
+}
+.lh--1-4 {
+line-height: 1.4;
+}
+.lh--1-5 {
+line-height: 1.5;
+}
+.lh--1-5 {
+line-height: 1.6;
+}
+
+.lh-1 {
+line-height: min(max(2.55rem, calc(2.55rem + ((1vw - 0.32rem) * 0.1875))), 2.7rem);
+}
+.lh-2 {
+line-height: min(max(2.4rem, calc(2.4rem + ((1vw - 0.32rem) * 0.5))), 2.8rem);
+}
+.lh-3 {
+line-height: min(max(2.4rem, calc(2.4rem + ((1vw - 0.32rem) * 1))), 3.2rem);
+}
+.lh-4 {
+line-height: min(max(3.2rem, calc(3.2rem + ((1vw - 0.32rem) * 0.5))), 3.6rem);
+}
+.lh-5 {
+line-height: min(max(3.51rem, calc(3.51rem + ((1vw - 0.32rem) * 0.6125))), 4rem);
+}
+.lh-6 {
+line-height: min(max(3.8rem, calc(3.8rem + ((1vw - 0.32rem) * 1.25))), 4.8rem);
+}
+
+/* Вертикальные отступы */
+ .m-0 {
+margin: 0rem;
+} .m-1 {
+margin: min(max(0.28rem, calc(0.28rem + ((1vw - 0.32rem) * 0.15))), 0.4rem);
+} .m-2 {
+margin: min(max(0.56rem, calc(0.56rem + ((1vw - 0.32rem) * 0.3))), 0.8rem);
+} .m-3 {
+margin: min(max(0.84rem, calc(0.84rem + ((1vw - 0.32rem) * 0.45))), 1.2rem);
+} .m-4 {
+margin: min(max(1.12rem, calc(1.12rem + ((1vw - 0.32rem) * 0.6))), 1.6rem);
+} .m-5 {
+margin: min(max(1.4rem, calc(1.4rem + ((1vw - 0.32rem) * 0.75))), 2rem);
+} .m-6 {
+margin: min(max(1.68rem, calc(1.68rem + ((1vw - 0.32rem) * 0.9))), 2.4rem);
+} .m-8 {
+margin: min(max(2.24rem, calc(2.24rem + ((1vw - 0.32rem) * 1.2))), 3.2rem);
+} .m-10 {
+margin: min(max(2.8rem, calc(2.8rem + ((1vw - 0.32rem) * 1.4286))), 4rem);
+} .m-12 {
+margin: min(max(3.36rem, calc(3.36rem + ((1vw - 0.32rem) * 1.8))), 4.8rem);
+} .m-14 {
+margin: min(max(3.92rem, calc(3.92rem + ((1vw - 0.32rem) * 2))), 5.6rem);
+} .m-16 {
+margin: min(max(4.48rem, calc(4.48rem + ((1vw - 0.32rem) * 2.4))), 6.4rem);
+} .m-20 {
+margin: min(max(5.6rem, calc(5.6rem + ((1vw - 0.32rem) * 3))), 8rem);
+} .m-24 {
+margin: min(max(6.72rem, calc(6.72rem + ((1vw - 0.32rem) * 3.6))), 9.6rem);
+} .m-28 {
+margin: min(max(7.84rem, calc(7.84rem + ((1vw - 0.32rem) * 4))), 11.2rem);
+} .m-32 {
+margin: min(max(8.96rem, calc(8.96rem + ((1vw - 0.32rem) * 4.5714))), 12.8rem);
+} .m-36 {
+margin: min(max(10.08rem, calc(10.08rem + ((1vw - 0.32rem) * 5.1429))), 14.4rem);
+} .m-40 {
+margin: min(max(11.2rem, calc(11.2rem + ((1vw - 0.32rem) * 5.7143))), 16rem);
+} .my-1 {
+margin-top: min(max(0.28rem, calc(0.28rem + ((1vw - 0.32rem) * 0.15))), 0.4rem); margin-bottom: min(max(0.28rem, calc(0.28rem + ((1vw - 0.32rem) * 0.15))), 0.4rem);
+} .my-2 {
+margin-top: min(max(0.56rem, calc(0.56rem + ((1vw - 0.32rem) * 0.3))), 0.8rem); margin-bottom: min(max(0.56rem, calc(0.56rem + ((1vw - 0.32rem) * 0.3))), 0.8rem);
+} .my-3 {
+margin-top: min(max(0.84rem, calc(0.84rem + ((1vw - 0.32rem) * 0.45))), 1.2rem); margin-bottom: min(max(0.84rem, calc(0.84rem + ((1vw - 0.32rem) * 0.45))), 1.2rem);
+} .my-4 {
+margin-top: min(max(1.12rem, calc(1.12rem + ((1vw - 0.32rem) * 0.6))), 1.6rem); margin-bottom: min(max(1.12rem, calc(1.12rem + ((1vw - 0.32rem) * 0.6))), 1.6rem);
+} .my-5 {
+margin-top: min(max(1.4rem, calc(1.4rem + ((1vw - 0.32rem) * 0.75))), 2rem); margin-bottom: min(max(1.4rem, calc(1.4rem + ((1vw - 0.32rem) * 0.75))), 2rem);
+} .my-6 {
+margin-top: min(max(1.68rem, calc(1.68rem + ((1vw - 0.32rem) * 0.9))), 2.4rem); margin-bottom: min(max(1.68rem, calc(1.68rem + ((1vw - 0.32rem) * 0.9))), 2.4rem);
+} .my-8 {
+margin-top: min(max(2.24rem, calc(2.24rem + ((1vw - 0.32rem) * 1.2))), 3.2rem); margin-bottom: min(max(2.24rem, calc(2.24rem + ((1vw - 0.32rem) * 1.2))), 3.2rem);
+} .my-10 {
+margin-top: min(max(2.8rem, calc(2.8rem + ((1vw - 0.32rem) * 1.4286))), 4rem); margin-bottom: min(max(2.8rem, calc(2.8rem + ((1vw - 0.32rem) * 1.4286))), 4rem);
+} .my-12 {
+margin-top: min(max(3.36rem, calc(3.36rem + ((1vw - 0.32rem) * 1.8))), 4.8rem); margin-bottom: min(max(3.36rem, calc(3.36rem + ((1vw - 0.32rem) * 1.8))), 4.8rem);
+} .my-14 {
+margin-top: min(max(3.92rem, calc(3.92rem + ((1vw - 0.32rem) * 2))), 5.6rem); margin-bottom: min(max(3.92rem, calc(3.92rem + ((1vw - 0.32rem) * 2))), 5.6rem);
+} .my-16 {
+margin-top: min(max(4.48rem, calc(4.48rem + ((1vw - 0.32rem) * 2.4))), 6.4rem); margin-bottom: min(max(4.48rem, calc(4.48rem + ((1vw - 0.32rem) * 2.4))), 6.4rem);
+} .my-20 {
+margin-top: min(max(5.6rem, calc(5.6rem + ((1vw - 0.32rem) * 3))), 8rem); margin-bottom: min(max(5.6rem, calc(5.6rem + ((1vw - 0.32rem) * 3))), 8rem);
+} .my-24 {
+margin-top: min(max(6.72rem, calc(6.72rem + ((1vw - 0.32rem) * 3.6))), 9.6rem); margin-bottom: min(max(6.72rem, calc(6.72rem + ((1vw - 0.32rem) * 3.6))), 9.6rem);
+} .my-28 {
+margin-top: min(max(7.84rem, calc(7.84rem + ((1vw - 0.32rem) * 4))), 11.2rem); margin-bottom: min(max(7.84rem, calc(7.84rem + ((1vw - 0.32rem) * 4))), 11.2rem);
+} .my-32 {
+margin-top: min(max(8.96rem, calc(8.96rem + ((1vw - 0.32rem) * 4.5714))), 12.8rem); margin-bottom: min(max(8.96rem, calc(8.96rem + ((1vw - 0.32rem) * 4.5714))), 12.8rem);
+} .my-36 {
+margin-top: min(max(10.08rem, calc(10.08rem + ((1vw - 0.32rem) * 5.1429))), 14.4rem); margin-bottom: min(max(10.08rem, calc(10.08rem + ((1vw - 0.32rem) * 5.1429))), 14.4rem);
+} .my-40 {
+margin-top: min(max(11.2rem, calc(11.2rem + ((1vw - 0.32rem) * 5.7143))), 16rem); margin-bottom: min(max(11.2rem, calc(11.2rem + ((1vw - 0.32rem) * 5.7143))), 16rem);
+} .mx-1 {
+margin-left: min(max(0.28rem, calc(0.28rem + ((1vw - 0.32rem) * 0.15))), 0.4rem); margin-right: min(max(0.28rem, calc(0.28rem + ((1vw - 0.32rem) * 0.15))), 0.4rem);
+} .mx-2 {
+margin-left: min(max(0.56rem, calc(0.56rem + ((1vw - 0.32rem) * 0.3))), 0.8rem); margin-right: min(max(0.56rem, calc(0.56rem + ((1vw - 0.32rem) * 0.3))), 0.8rem);
+} .mx-3 {
+margin-left: min(max(0.84rem, calc(0.84rem + ((1vw - 0.32rem) * 0.45))), 1.2rem); margin-right: min(max(0.84rem, calc(0.84rem + ((1vw - 0.32rem) * 0.45))), 1.2rem);
+} .mx-4 {
+margin-left: min(max(1.12rem, calc(1.12rem + ((1vw - 0.32rem) * 0.6))), 1.6rem); margin-right: min(max(1.12rem, calc(1.12rem + ((1vw - 0.32rem) * 0.6))), 1.6rem);
+} .mx-5 {
+margin-left: min(max(1.4rem, calc(1.4rem + ((1vw - 0.32rem) * 0.75))), 2rem); margin-right: min(max(1.4rem, calc(1.4rem + ((1vw - 0.32rem) * 0.75))), 2rem);
+} .mx-6 {
+margin-left: min(max(1.68rem, calc(1.68rem + ((1vw - 0.32rem) * 0.9))), 2.4rem); margin-right: min(max(1.68rem, calc(1.68rem + ((1vw - 0.32rem) * 0.9))), 2.4rem);
+} .mx-8 {
+margin-left: min(max(2.24rem, calc(2.24rem + ((1vw - 0.32rem) * 1.2))), 3.2rem); margin-right: min(max(2.24rem, calc(2.24rem + ((1vw - 0.32rem) * 1.2))), 3.2rem);
+} .mx-10 {
+margin-left: min(max(2.8rem, calc(2.8rem + ((1vw - 0.32rem) * 1.4286))), 4rem); margin-right: min(max(2.8rem, calc(2.8rem + ((1vw - 0.32rem) * 1.4286))), 4rem);
+} .mx-12 {
+margin-left: min(max(3.36rem, calc(3.36rem + ((1vw - 0.32rem) * 1.8))), 4.8rem); margin-right: min(max(3.36rem, calc(3.36rem + ((1vw - 0.32rem) * 1.8))), 4.8rem);
+} .mx-14 {
+margin-left: min(max(3.92rem, calc(3.92rem + ((1vw - 0.32rem) * 2))), 5.6rem); margin-right: min(max(3.92rem, calc(3.92rem + ((1vw - 0.32rem) * 2))), 5.6rem);
+} .mx-16 {
+margin-left: min(max(4.48rem, calc(4.48rem + ((1vw - 0.32rem) * 2.4))), 6.4rem); margin-right: min(max(4.48rem, calc(4.48rem + ((1vw - 0.32rem) * 2.4))), 6.4rem);
+} .mx-20 {
+margin-left: min(max(5.6rem, calc(5.6rem + ((1vw - 0.32rem) * 3))), 8rem); margin-right: min(max(5.6rem, calc(5.6rem + ((1vw - 0.32rem) * 3))), 8rem);
+} .mx-24 {
+margin-left: min(max(6.72rem, calc(6.72rem + ((1vw - 0.32rem) * 3.6))), 9.6rem); margin-right: min(max(6.72rem, calc(6.72rem + ((1vw - 0.32rem) * 3.6))), 9.6rem);
+} .mx-28 {
+margin-left: min(max(7.84rem, calc(7.84rem + ((1vw - 0.32rem) * 4))), 11.2rem); margin-right: min(max(7.84rem, calc(7.84rem + ((1vw - 0.32rem) * 4))), 11.2rem);
+} .mx-32 {
+margin-left: min(max(8.96rem, calc(8.96rem + ((1vw - 0.32rem) * 4.5714))), 12.8rem); margin-right: min(max(8.96rem, calc(8.96rem + ((1vw - 0.32rem) * 4.5714))), 12.8rem);
+} .mx-36 {
+margin-left: min(max(10.08rem, calc(10.08rem + ((1vw - 0.32rem) * 5.1429))), 14.4rem); margin-right: min(max(10.08rem, calc(10.08rem + ((1vw - 0.32rem) * 5.1429))), 14.4rem);
+} .mx-40 {
+margin-left: min(max(11.2rem, calc(11.2rem + ((1vw - 0.32rem) * 5.7143))), 16rem); margin-right: min(max(11.2rem, calc(11.2rem + ((1vw - 0.32rem) * 5.7143))), 16rem);
+} .mt-0 {
+margin-top: 0rem;
+} .mt-1 {
+margin-top: min(max(0.28rem, calc(0.28rem + ((1vw - 0.32rem) * 0.15))), 0.4rem);
+} .mt-2 {
+margin-top: min(max(0.56rem, calc(0.56rem + ((1vw - 0.32rem) * 0.3))), 0.8rem);
+} .mt-3 {
+margin-top: min(max(0.84rem, calc(0.84rem + ((1vw - 0.32rem) * 0.45))), 1.2rem);
+} .mt-4 {
+margin-top: min(max(1.12rem, calc(1.12rem + ((1vw - 0.32rem) * 0.6))), 1.6rem);
+} .mt-5 {
+margin-top: min(max(1.4rem, calc(1.4rem + ((1vw - 0.32rem) * 0.75))), 2rem);
+} .mt-6 {
+margin-top: min(max(1.68rem, calc(1.68rem + ((1vw - 0.32rem) * 0.9))), 2.4rem);
+} .mt-8 {
+margin-top: min(max(2.24rem, calc(2.24rem + ((1vw - 0.32rem) * 1.2))), 3.2rem);
+} .mt-10 {
+margin-top: min(max(2.8rem, calc(2.8rem + ((1vw - 0.32rem) * 1.4286))), 4rem);
+} .mt-12 {
+margin-top: min(max(3.36rem, calc(3.36rem + ((1vw - 0.32rem) * 1.8))), 4.8rem);
+} .mt-14 {
+margin-top: min(max(3.92rem, calc(3.92rem + ((1vw - 0.32rem) * 2))), 5.6rem);
+} .mt-16 {
+margin-top: min(max(4.48rem, calc(4.48rem + ((1vw - 0.32rem) * 2.4))), 6.4rem);
+} .mt-20 {
+margin-top: min(max(5.6rem, calc(5.6rem + ((1vw - 0.32rem) * 3))), 8rem);
+} .mt-24 {
+margin-top: min(max(6.72rem, calc(6.72rem + ((1vw - 0.32rem) * 3.6))), 9.6rem);
+} .mt-28 {
+margin-top: min(max(7.84rem, calc(7.84rem + ((1vw - 0.32rem) * 4))), 11.2rem));
+} .mt-32 {
+margin-top: min(max(8.96rem, calc(8.96rem + ((1vw - 0.32rem) * 4.5714))), 12.8rem);
+} .mt-36 {
+margin-top: min(max(10.08rem, calc(10.08rem + ((1vw - 0.32rem) * 5.1429))), 14.4rem);
+} .mt-40 {
+margin-top: min(max(11.2rem, calc(11.2rem + ((1vw - 0.32rem) * 5.7143))), 16rem);
+} .mr-0 {
+margin-right: 0rem;
+} .mr-1 {
+margin-right: min(max(0.28rem, calc(0.28rem + ((1vw - 0.32rem) * 0.15))), 0.4rem);
+} .mr-2 {
+margin-right: min(max(0.56rem, calc(0.56rem + ((1vw - 0.32rem) * 0.3))), 0.8rem);
+} .mr-3 {
+margin-right: min(max(0.84rem, calc(0.84rem + ((1vw - 0.32rem) * 0.45))), 1.2rem);
+} .mr-4 {
+margin-right: min(max(1.12rem, calc(1.12rem + ((1vw - 0.32rem) * 0.6))), 1.6rem);
+} .mr-5 {
+margin-right: min(max(1.4rem, calc(1.4rem + ((1vw - 0.32rem) * 0.75))), 2rem);
+} .mr-6 {
+margin-right: min(max(1.68rem, calc(1.68rem + ((1vw - 0.32rem) * 0.9))), 2.4rem);
+} .mr-8 {
+margin-right: min(max(2.24rem, calc(2.24rem + ((1vw - 0.32rem) * 1.2))), 3.2rem);
+} .mr-10 {
+margin-right: min(max(2.8rem, calc(2.8rem + ((1vw - 0.32rem) * 1.4286))), 4rem);
+} .mr-12 {
+margin-right: min(max(3.36rem, calc(3.36rem + ((1vw - 0.32rem) * 1.8))), 4.8rem);
+} .mr-14 {
+margin-right: min(max(3.92rem, calc(3.92rem + ((1vw - 0.32rem) * 2))), 5.6rem);
+} .mr-16 {
+margin-right: min(max(4.48rem, calc(4.48rem + ((1vw - 0.32rem) * 2.4))), 6.4rem);
+} .mr-20 {
+margin-right: min(max(5.6rem, calc(5.6rem + ((1vw - 0.32rem) * 3))), 8rem);
+} .mr-24 {
+margin-right: min(max(6.72rem, calc(6.72rem + ((1vw - 0.32rem) * 3.6))), 9.6rem);
+} .mr-28 {
+margin-right: min(max(7.84rem, calc(7.84rem + ((1vw - 0.32rem) * 4))), 11.2rem);
+} .mr-32 {
+margin-right: min(max(8.96rem, calc(8.96rem + ((1vw - 0.32rem) * 4.5714))), 12.8rem);
+} .mr-36 {
+margin-right: min(max(10.08rem, calc(10.08rem + ((1vw - 0.32rem) * 5.1429))), 14.4rem);
+} .mr-40 {
+margin-right: min(max(11.2rem, calc(11.2rem + ((1vw - 0.32rem) * 5.7143))), 16rem);
+} .mb-0 {
+margin-bottom: 0rem;
+} .mb-1 {
+margin-bottom: min(max(0.28rem, calc(0.28rem + ((1vw - 0.32rem) * 0.15))), 0.4rem);
+} .mb-2 {
+margin-bottom: min(max(0.56rem, calc(0.56rem + ((1vw - 0.32rem) * 0.3))), 0.8rem);
+} .mb-3 {
+margin-bottom: min(max(0.84rem, calc(0.84rem + ((1vw - 0.32rem) * 0.45))), 1.2rem);
+} .mb-4 {
+margin-bottom: min(max(1.12rem, calc(1.12rem + ((1vw - 0.32rem) * 0.6))), 1.6rem);
+} .mb-5 {
+margin-bottom: min(max(1.4rem, calc(1.4rem + ((1vw - 0.32rem) * 0.75))), 2rem);
+} .mb-6 {
+margin-bottom: min(max(1.68rem, calc(1.68rem + ((1vw - 0.32rem) * 0.9))), 2.4rem);
+} .mb-8 {
+margin-bottom: min(max(2.24rem, calc(2.24rem + ((1vw - 0.32rem) * 1.2))), 3.2rem);
+} .mb-10 {
+margin-bottom: min(max(2.8rem, calc(2.8rem + ((1vw - 0.32rem) * 1.4286))), 4rem);
+} .mb-12 {
+margin-bottom: min(max(3.36rem, calc(3.36rem + ((1vw - 0.32rem) * 1.8))), 4.8rem);
+} .mb-14 {
+margin-bottom: min(max(3.92rem, calc(3.92rem + ((1vw - 0.32rem) * 2))), 5.6rem);
+} .mb-16 {
+margin-bottom: min(max(4.48rem, calc(4.48rem + ((1vw - 0.32rem) * 2.4))), 6.4rem);
+} .mb-20 {
+margin-bottom: min(max(5.6rem, calc(5.6rem + ((1vw - 0.32rem) * 3))), 8rem);
+} .mb-24 {
+margin-bottom: min(max(6.72rem, calc(6.72rem + ((1vw - 0.32rem) * 3.6))), 9.6rem);
+} .mb-28 {
+margin-bottom: min(max(7.84rem, calc(7.84rem + ((1vw - 0.32rem) * 4))), 11.2rem);
+} .mb-32 {
+margin-bottom: min(max(8.96rem, calc(8.96rem + ((1vw - 0.32rem) * 4.5714))), 12.8rem);
+} .mb-36 {
+margin-bottom: min(max(10.08rem, calc(10.08rem + ((1vw - 0.32rem) * 5.1429))), 14.4rem);
+} .mb-40 {
+margin-bottom: min(max(11.2rem, calc(11.2rem + ((1vw - 0.32rem) * 5.7143))), 16rem);
+} .ml-0 {
+margin-left: 0rem;
+} .ml-1 {
+margin-left: min(max(0.28rem, calc(0.28rem + ((1vw - 0.32rem) * 0.15))), 0.4rem);
+} .ml-2 {
+margin-left: min(max(0.56rem, calc(0.56rem + ((1vw - 0.32rem) * 0.3))), 0.8rem);
+} .ml-3 {
+margin-left: min(max(0.84rem, calc(0.84rem + ((1vw - 0.32rem) * 0.45))), 1.2rem);
+} .ml-4 {
+margin-left: min(max(1.12rem, calc(1.12rem + ((1vw - 0.32rem) * 0.6))), 1.6rem);
+} .ml-5 {
+margin-left: min(max(1.4rem, calc(1.4rem + ((1vw - 0.32rem) * 0.75))), 2rem);
+} .ml-6 {
+margin-left: min(max(1.68rem, calc(1.68rem + ((1vw - 0.32rem) * 0.9))), 2.4rem);
+} .ml-8 {
+margin-left: min(max(2.24rem, calc(2.24rem + ((1vw - 0.32rem) * 1.2))), 3.2rem);
+} .ml-10 {
+margin-left: min(max(2.8rem, calc(2.8rem + ((1vw - 0.32rem) * 1.4286))), 4rem);
+} .ml-12 {
+margin-left: min(max(3.36rem, calc(3.36rem + ((1vw - 0.32rem) * 1.8))), 4.8rem);
+} .ml-14 {
+margin-left: min(max(3.92rem, calc(3.92rem + ((1vw - 0.32rem) * 2))), 5.6rem);
+} .ml-16 {
+margin-left: min(max(4.48rem, calc(4.48rem + ((1vw - 0.32rem) * 2.4))), 6.4rem);
+} .ml-20 {
+margin-left: min(max(5.6rem, calc(5.6rem + ((1vw - 0.32rem) * 3))), 8rem);
+} .ml-24 {
+margin-left: min(max(6.72rem, calc(6.72rem + ((1vw - 0.32rem) * 3.6))), 9.6rem);
+} .ml-28 {
+margin-left: min(max(7.84rem, calc(7.84rem + ((1vw - 0.32rem) * 4))), 11.2rem);
+} .ml-32 {
+margin-left: min(max(8.96rem, calc(8.96rem + ((1vw - 0.32rem) * 4.5714))), 12.8rem);
+} .ml-36 {
+margin-left: min(max(10.08rem, calc(10.08rem + ((1vw - 0.32rem) * 5.1429))), 14.4rem);
+} .ml-40 {
+margin-left: min(max(11.2rem, calc(11.2rem + ((1vw - 0.32rem) * 5.7143))), 16rem);
+}
+
+
+/* внутренние отступы */
+
+ .p-0 {
+padding: 0rem;
+} .p-1 {
+padding: min(max(0.28rem, calc(0.28rem + ((1vw - 0.32rem) * 0.15))), 0.4rem);
+} .p-2 {
+padding: min(max(0.56rem, calc(0.56rem + ((1vw - 0.32rem) * 0.3))), 0.8rem);
+} .p-3 {
+padding: min(max(0.84rem, calc(0.84rem + ((1vw - 0.32rem) * 0.45))), 1.2rem);
+} .p-4 {
+padding: min(max(1.12rem, calc(1.12rem + ((1vw - 0.32rem) * 0.6))), 1.6rem);
+} .p-5 {
+padding: min(max(1.4rem, calc(1.4rem + ((1vw - 0.32rem) * 0.75))), 2rem);
+} .p-6 {
+padding: min(max(1.68rem, calc(1.68rem + ((1vw - 0.32rem) * 0.9))), 2.4rem);
+} .p-8 {
+padding: min(max(2.24rem, calc(2.24rem + ((1vw - 0.32rem) * 1.2))), 3.2rem);
+} .p-10 {
+padding: min(max(2.8rem, calc(2.8rem + ((1vw - 0.32rem) * 1.4286))), 4rem);
+} .p-12 {
+padding: min(max(3.36rem, calc(3.36rem + ((1vw - 0.32rem) * 1.8))), 4.8rem);
+} .p-14 {
+padding: min(max(3.92rem, calc(3.92rem + ((1vw - 0.32rem) * 2))), 5.6rem);
+} .p-16 {
+padding: min(max(4.48rem, calc(4.48rem + ((1vw - 0.32rem) * 2.4))), 6.4rem);
+} .p-20 {
+padding: min(max(5.6rem, calc(5.6rem + ((1vw - 0.32rem) * 3))), 8rem);
+} .p-24 {
+padding: min(max(6.72rem, calc(6.72rem + ((1vw - 0.32rem) * 3.6))), 9.6rem);
+} .p-28 {
+padding: min(max(7.84rem, calc(7.84rem + ((1vw - 0.32rem) * 4))), 11.2rem);
+} .p-32 {
+padding: min(max(8.96rem, calc(8.96rem + ((1vw - 0.32rem) * 4.5714))), 12.8rem);
+} .p-36 {
+padding: min(max(10.08rem, calc(10.08rem + ((1vw - 0.32rem) * 5.1429))), 14.4rem);
+} .p-40 {
+padding: min(max(11.2rem, calc(11.2rem + ((1vw - 0.32rem) * 5.7143))), 16rem);
+} .py-1 {
+padding-top: min(max(0.28rem, calc(0.28rem + ((1vw - 0.32rem) * 0.15))), 0.4rem); padding-bottom: min(max(0.28rem, calc(0.28rem + ((1vw - 0.32rem) * 0.15))), 0.4rem);
+} .py-2 {
+padding-top: min(max(0.56rem, calc(0.56rem + ((1vw - 0.32rem) * 0.3))), 0.8rem); padding-bottom: min(max(0.56rem, calc(0.56rem + ((1vw - 0.32rem) * 0.3))), 0.8rem);
+} .py-3 {
+padding-top: min(max(0.84rem, calc(0.84rem + ((1vw - 0.32rem) * 0.45))), 1.2rem); padding-bottom: min(max(0.84rem, calc(0.84rem + ((1vw - 0.32rem) * 0.45))), 1.2rem);
+} .py-4 {
+padding-top: min(max(1.12rem, calc(1.12rem + ((1vw - 0.32rem) * 0.6))), 1.6rem); padding-bottom: min(max(1.12rem, calc(1.12rem + ((1vw - 0.32rem) * 0.6))), 1.6rem);
+} .py-5 {
+padding-top: min(max(1.4rem, calc(1.4rem + ((1vw - 0.32rem) * 0.75))), 2rem); padding-bottom: min(max(1.4rem, calc(1.4rem + ((1vw - 0.32rem) * 0.75))), 2rem);
+} .py-6 {
+padding-top: min(max(1.68rem, calc(1.68rem + ((1vw - 0.32rem) * 0.9))), 2.4rem); padding-bottom: min(max(1.68rem, calc(1.68rem + ((1vw - 0.32rem) * 0.9))), 2.4rem);
+} .py-8 {
+padding-top: min(max(2.24rem, calc(2.24rem + ((1vw - 0.32rem) * 1.2))), 3.2rem); padding-bottom: min(max(2.24rem, calc(2.24rem + ((1vw - 0.32rem) * 1.2))), 3.2rem);
+} .py-10 {
+padding-top: min(max(2.8rem, calc(2.8rem + ((1vw - 0.32rem) * 1.4286))), 4rem); padding-bottom: min(max(2.8rem, calc(2.8rem + ((1vw - 0.32rem) * 1.4286))), 4rem);
+} .py-12 {
+padding-top: min(max(3.36rem, calc(3.36rem + ((1vw - 0.32rem) * 1.8))), 4.8rem); padding-bottom: min(max(3.36rem, calc(3.36rem + ((1vw - 0.32rem) * 1.8))), 4.8rem);
+} .py-14 {
+padding-top: min(max(3.92rem, calc(3.92rem + ((1vw - 0.32rem) * 2))), 5.6rem); padding-bottom: min(max(3.92rem, calc(3.92rem + ((1vw - 0.32rem) * 2))), 5.6rem);
+} .py-16 {
+padding-top: min(max(4.48rem, calc(4.48rem + ((1vw - 0.32rem) * 2.4))), 6.4rem); padding-bottom: min(max(4.48rem, calc(4.48rem + ((1vw - 0.32rem) * 2.4))), 6.4rem);
+} .py-20 {
+padding-top: min(max(5.6rem, calc(5.6rem + ((1vw - 0.32rem) * 3))), 8rem); padding-bottom: min(max(5.6rem, calc(5.6rem + ((1vw - 0.32rem) * 3))), 8rem);
+} .py-24 {
+padding-top: min(max(6.72rem, calc(6.72rem + ((1vw - 0.32rem) * 3.6))), 9.6rem); padding-bottom: min(max(6.72rem, calc(6.72rem + ((1vw - 0.32rem) * 3.6))), 9.6rem);
+} .py-28 {
+padding-top: min(max(7.84rem, calc(7.84rem + ((1vw - 0.32rem) * 4))), 11.2rem); padding-bottom: min(max(7.84rem, calc(7.84rem + ((1vw - 0.32rem) * 4))), 11.2rem);
+} .py-32 {
+padding-top: min(max(8.96rem, calc(8.96rem + ((1vw - 0.32rem) * 4.5714))), 12.8rem); padding-bottom: min(max(8.96rem, calc(8.96rem + ((1vw - 0.32rem) * 4.5714))), 12.8rem);
+} .py-36 {
+padding-top: min(max(10.08rem, calc(10.08rem + ((1vw - 0.32rem) * 5.1429))), 14.4rem); padding-bottom: min(max(10.08rem, calc(10.08rem + ((1vw - 0.32rem) * 5.1429))), 14.4rem);
+} .py-40 {
+padding-top: min(max(11.2rem, calc(11.2rem + ((1vw - 0.32rem) * 5.7143))), 16rem); padding-bottom: min(max(11.2rem, calc(11.2rem + ((1vw - 0.32rem) * 5.7143))), 16rem);
+} .px-1 {
+padding-left: min(max(0.28rem, calc(0.28rem + ((1vw - 0.32rem) * 0.15))), 0.4rem); padding-right: min(max(0.28rem, calc(0.28rem + ((1vw - 0.32rem) * 0.15))), 0.4rem);
+} .px-2 {
+padding-left: min(max(0.56rem, calc(0.56rem + ((1vw - 0.32rem) * 0.3))), 0.8rem); padding-right: min(max(0.56rem, calc(0.56rem + ((1vw - 0.32rem) * 0.3))), 0.8rem);
+} .px-3 {
+padding-left: min(max(0.84rem, calc(0.84rem + ((1vw - 0.32rem) * 0.45))), 1.2rem); padding-right: min(max(0.84rem, calc(0.84rem + ((1vw - 0.32rem) * 0.45))), 1.2rem);
+} .px-4 {
+padding-left: min(max(1.12rem, calc(1.12rem + ((1vw - 0.32rem) * 0.6))), 1.6rem); padding-right: min(max(1.12rem, calc(1.12rem + ((1vw - 0.32rem) * 0.6))), 1.6rem);
+} .px-5 {
+padding-left: min(max(1.4rem, calc(1.4rem + ((1vw - 0.32rem) * 0.75))), 2rem); padding-right: min(max(1.4rem, calc(1.4rem + ((1vw - 0.32rem) * 0.75))), 2rem);
+} .px-6 {
+padding-left: min(max(1.68rem, calc(1.68rem + ((1vw - 0.32rem) * 0.9))), 2.4rem); padding-right: min(max(1.68rem, calc(1.68rem + ((1vw - 0.32rem) * 0.9))), 2.4rem);
+} .px-8 {
+padding-left: min(max(2.24rem, calc(2.24rem + ((1vw - 0.32rem) * 1.2))), 3.2rem); padding-right: min(max(2.24rem, calc(2.24rem + ((1vw - 0.32rem) * 1.2))), 3.2rem);
+} .px-10 {
+padding-left: min(max(2.8rem, calc(2.8rem + ((1vw - 0.32rem) * 1.4286))), 4rem); padding-right: min(max(2.8rem, calc(2.8rem + ((1vw - 0.32rem) * 1.4286))), 4rem);
+} .px-12 {
+padding-left: min(max(3.36rem, calc(3.36rem + ((1vw - 0.32rem) * 1.8))), 4.8rem); padding-right: min(max(3.36rem, calc(3.36rem + ((1vw - 0.32rem) * 1.8))), 4.8rem);
+} .px-14 {
+padding-left: min(max(3.92rem, calc(3.92rem + ((1vw - 0.32rem) * 2))), 5.6rem); padding-right: min(max(3.92rem, calc(3.92rem + ((1vw - 0.32rem) * 2))), 5.6rem);
+} .px-16 {
+padding-left: min(max(4.48rem, calc(4.48rem + ((1vw - 0.32rem) * 2.4))), 6.4rem); padding-right: min(max(4.48rem, calc(4.48rem + ((1vw - 0.32rem) * 2.4))), 6.4rem);
+} .px-20 {
+padding-left: min(max(5.6rem, calc(5.6rem + ((1vw - 0.32rem) * 3))), 8rem); padding-right: min(max(5.6rem, calc(5.6rem + ((1vw - 0.32rem) * 3))), 8rem);
+} .px-24 {
+padding-left: min(max(6.72rem, calc(6.72rem + ((1vw - 0.32rem) * 3.6))), 9.6rem); padding-right: min(max(6.72rem, calc(6.72rem + ((1vw - 0.32rem) * 3.6))), 9.6rem);
+} .px-28 {
+padding-left: min(max(7.84rem, calc(7.84rem + ((1vw - 0.32rem) * 4))), 11.2rem); padding-right: min(max(7.84rem, calc(7.84rem + ((1vw - 0.32rem) * 4))), 11.2rem);
+} .px-32 {
+padding-left: min(max(8.96rem, calc(8.96rem + ((1vw - 0.32rem) * 4.5714))), 12.8rem); padding-right: min(max(8.96rem, calc(8.96rem + ((1vw - 0.32rem) * 4.5714))), 12.8rem);
+} .px-36 {
+padding-left: min(max(10.08rem, calc(10.08rem + ((1vw - 0.32rem) * 5.1429))), 14.4rem); padding-right: min(max(10.08rem, calc(10.08rem + ((1vw - 0.32rem) * 5.1429))), 14.4rem);
+} .px-40 {
+padding-left: min(max(11.2rem, calc(11.2rem + ((1vw - 0.32rem) * 5.7143))), 16rem); padding-right: min(max(11.2rem, calc(11.2rem + ((1vw - 0.32rem) * 5.7143))), 16rem);
+} .pt-0 {
+padding-top: 0rem;
+} .pt-1 {
+padding-top: min(max(0.28rem, calc(0.28rem + ((1vw - 0.32rem) * 0.15))), 0.4rem);
+} .pt-2 {
+padding-top: min(max(0.56rem, calc(0.56rem + ((1vw - 0.32rem) * 0.3))), 0.8rem);
+} .pt-3 {
+padding-top: min(max(0.84rem, calc(0.84rem + ((1vw - 0.32rem) * 0.45))), 1.2rem);
+} .pt-4 {
+padding-top: min(max(1.12rem, calc(1.12rem + ((1vw - 0.32rem) * 0.6))), 1.6rem);
+} .pt-5 {
+padding-top: min(max(1.4rem, calc(1.4rem + ((1vw - 0.32rem) * 0.75))), 2rem);
+} .pt-6 {
+padding-top: min(max(1.68rem, calc(1.68rem + ((1vw - 0.32rem) * 0.9))), 2.4rem);
+} .pt-8 {
+padding-top: min(max(2.24rem, calc(2.24rem + ((1vw - 0.32rem) * 1.2))), 3.2rem);
+} .pt-10 {
+padding-top: min(max(2.8rem, calc(2.8rem + ((1vw - 0.32rem) * 1.4286))), 4rem);
+} .pt-12 {
+padding-top: min(max(3.36rem, calc(3.36rem + ((1vw - 0.32rem) * 1.8))), 4.8rem);
+} .pt-14 {
+padding-top: min(max(3.92rem, calc(3.92rem + ((1vw - 0.32rem) * 2))), 5.6rem);
+} .pt-16 {
+padding-top: min(max(4.48rem, calc(4.48rem + ((1vw - 0.32rem) * 2.4))), 6.4rem);
+} .pt-20 {
+padding-top: min(max(5.6rem, calc(5.6rem + ((1vw - 0.32rem) * 3))), 8rem);
+} .pt-24 {
+padding-top: min(max(6.72rem, calc(6.72rem + ((1vw - 0.32rem) * 3.6))), 9.6rem);
+} .pt-28 {
+padding-top: min(max(7.84rem, calc(7.84rem + ((1vw - 0.32rem) * 4))), 11.2rem));
+} .pt-32 {
+padding-top: min(max(8.96rem, calc(8.96rem + ((1vw - 0.32rem) * 4.5714))), 12.8rem);
+} .pt-36 {
+padding-top: min(max(10.08rem, calc(10.08rem + ((1vw - 0.32rem) * 5.1429))), 14.4rem);
+} .pt-40 {
+padding-top: min(max(11.2rem, calc(11.2rem + ((1vw - 0.32rem) * 5.7143))), 16rem);
+} .pr-0 {
+padding-right: 0rem;
+} .pr-1 {
+padding-right: min(max(0.28rem, calc(0.28rem + ((1vw - 0.32rem) * 0.15))), 0.4rem);
+} .pr-2 {
+padding-right: min(max(0.56rem, calc(0.56rem + ((1vw - 0.32rem) * 0.3))), 0.8rem);
+} .pr-3 {
+padding-right: min(max(0.84rem, calc(0.84rem + ((1vw - 0.32rem) * 0.45))), 1.2rem);
+} .pr-4 {
+padding-right: min(max(1.12rem, calc(1.12rem + ((1vw - 0.32rem) * 0.6))), 1.6rem);
+} .pr-5 {
+padding-right: min(max(1.4rem, calc(1.4rem + ((1vw - 0.32rem) * 0.75))), 2rem);
+} .pr-6 {
+padding-right: min(max(1.68rem, calc(1.68rem + ((1vw - 0.32rem) * 0.9))), 2.4rem);
+} .pr-8 {
+padding-right: min(max(2.24rem, calc(2.24rem + ((1vw - 0.32rem) * 1.2))), 3.2rem);
+} .pr-10 {
+padding-right: min(max(2.8rem, calc(2.8rem + ((1vw - 0.32rem) * 1.4286))), 4rem);
+} .pr-12 {
+padding-right: min(max(3.36rem, calc(3.36rem + ((1vw - 0.32rem) * 1.8))), 4.8rem);
+} .pr-14 {
+padding-right: min(max(3.92rem, calc(3.92rem + ((1vw - 0.32rem) * 2))), 5.6rem);
+} .pr-16 {
+padding-right: min(max(4.48rem, calc(4.48rem + ((1vw - 0.32rem) * 2.4))), 6.4rem);
+} .pr-20 {
+padding-right: min(max(5.6rem, calc(5.6rem + ((1vw - 0.32rem) * 3))), 8rem);
+} .pr-24 {
+padding-right: min(max(6.72rem, calc(6.72rem + ((1vw - 0.32rem) * 3.6))), 9.6rem);
+} .pr-28 {
+padding-right: min(max(7.84rem, calc(7.84rem + ((1vw - 0.32rem) * 4))), 11.2rem);
+} .pr-32 {
+padding-right: min(max(8.96rem, calc(8.96rem + ((1vw - 0.32rem) * 4.5714))), 12.8rem);
+} .pr-36 {
+padding-right: min(max(10.08rem, calc(10.08rem + ((1vw - 0.32rem) * 5.1429))), 14.4rem);
+} .pr-40 {
+padding-right: min(max(11.2rem, calc(11.2rem + ((1vw - 0.32rem) * 5.7143))), 16rem);
+} .pb-0 {
+padding-bottom: 0rem;
+} .pb-1 {
+padding-bottom: min(max(0.28rem, calc(0.28rem + ((1vw - 0.32rem) * 0.15))), 0.4rem);
+} .pb-2 {
+padding-bottom: min(max(0.56rem, calc(0.56rem + ((1vw - 0.32rem) * 0.3))), 0.8rem);
+} .pb-3 {
+padding-bottom: min(max(0.84rem, calc(0.84rem + ((1vw - 0.32rem) * 0.45))), 1.2rem);
+} .pb-4 {
+padding-bottom: min(max(1.12rem, calc(1.12rem + ((1vw - 0.32rem) * 0.6))), 1.6rem);
+} .pb-5 {
+padding-bottom: min(max(1.4rem, calc(1.4rem + ((1vw - 0.32rem) * 0.75))), 2rem);
+} .pb-6 {
+padding-bottom: min(max(1.68rem, calc(1.68rem + ((1vw - 0.32rem) * 0.9))), 2.4rem);
+} .pb-8 {
+padding-bottom: min(max(2.24rem, calc(2.24rem + ((1vw - 0.32rem) * 1.2))), 3.2rem);
+} .pb-10 {
+padding-bottom: min(max(2.8rem, calc(2.8rem + ((1vw - 0.32rem) * 1.4286))), 4rem);
+} .pb-12 {
+padding-bottom: min(max(3.36rem, calc(3.36rem + ((1vw - 0.32rem) * 1.8))), 4.8rem);
+} .pb-14 {
+padding-bottom: min(max(3.92rem, calc(3.92rem + ((1vw - 0.32rem) * 2))), 5.6rem);
+} .pb-16 {
+padding-bottom: min(max(4.48rem, calc(4.48rem + ((1vw - 0.32rem) * 2.4))), 6.4rem);
+} .pb-20 {
+padding-bottom: min(max(5.6rem, calc(5.6rem + ((1vw - 0.32rem) * 3))), 8rem);
+} .pb-24 {
+padding-bottom: min(max(6.72rem, calc(6.72rem + ((1vw - 0.32rem) * 3.6))), 9.6rem);
+} .pb-28 {
+padding-bottom: min(max(7.84rem, calc(7.84rem + ((1vw - 0.32rem) * 4))), 11.2rem);
+} .pb-32 {
+padding-bottom: min(max(8.96rem, calc(8.96rem + ((1vw - 0.32rem) * 4.5714))), 12.8rem);
+} .pb-36 {
+padding-bottom: min(max(10.08rem, calc(10.08rem + ((1vw - 0.32rem) * 5.1429))), 14.4rem);
+} .pb-40 {
+padding-bottom: min(max(11.2rem, calc(11.2rem + ((1vw - 0.32rem) * 5.7143))), 16rem);
+} .pl-0 {
+padding-left: 0rem;
+} .pl-1 {
+padding-left: min(max(0.28rem, calc(0.28rem + ((1vw - 0.32rem) * 0.15))), 0.4rem);
+} .pl-2 {
+padding-left: min(max(0.56rem, calc(0.56rem + ((1vw - 0.32rem) * 0.3))), 0.8rem);
+} .pl-3 {
+padding-left: min(max(0.84rem, calc(0.84rem + ((1vw - 0.32rem) * 0.45))), 1.2rem);
+} .pl-4 {
+padding-left: min(max(1.12rem, calc(1.12rem + ((1vw - 0.32rem) * 0.6))), 1.6rem);
+} .pl-5 {
+padding-left: min(max(1.4rem, calc(1.4rem + ((1vw - 0.32rem) * 0.75))), 2rem);
+} .pl-6 {
+padding-left: min(max(1.68rem, calc(1.68rem + ((1vw - 0.32rem) * 0.9))), 2.4rem);
+} .pl-8 {
+padding-left: min(max(2.24rem, calc(2.24rem + ((1vw - 0.32rem) * 1.2))), 3.2rem);
+} .pl-10 {
+padding-left: min(max(2.8rem, calc(2.8rem + ((1vw - 0.32rem) * 1.4286))), 4rem);
+} .pl-12 {
+padding-left: min(max(3.36rem, calc(3.36rem + ((1vw - 0.32rem) * 1.8))), 4.8rem);
+} .pl-14 {
+padding-left: min(max(3.92rem, calc(3.92rem + ((1vw - 0.32rem) * 2))), 5.6rem);
+} .pl-16 {
+padding-left: min(max(4.48rem, calc(4.48rem + ((1vw - 0.32rem) * 2.4))), 6.4rem);
+} .pl-20 {
+padding-left: min(max(5.6rem, calc(5.6rem + ((1vw - 0.32rem) * 3))), 8rem);
+} .pl-24 {
+padding-left: min(max(6.72rem, calc(6.72rem + ((1vw - 0.32rem) * 3.6))), 9.6rem);
+} .pl-28 {
+padding-left: min(max(7.84rem, calc(7.84rem + ((1vw - 0.32rem) * 4))), 11.2rem);
+} .pl-32 {
+padding-left: min(max(8.96rem, calc(8.96rem + ((1vw - 0.32rem) * 4.5714))), 12.8rem);
+} .pl-36 {
+padding-left: min(max(10.08rem, calc(10.08rem + ((1vw - 0.32rem) * 5.1429))), 14.4rem);
+} .pl-40 {
+padding-left: min(max(11.2rem, calc(11.2rem + ((1vw - 0.32rem) * 5.7143))), 16rem);
+}
